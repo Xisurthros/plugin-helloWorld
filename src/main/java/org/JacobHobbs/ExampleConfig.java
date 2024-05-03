@@ -1,4 +1,4 @@
-package com.example;
+package org.JacobHobbs;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
@@ -15,5 +15,15 @@ public interface ExampleConfig extends Config
 	default String greeting()
 	{
 		return "Hello";
+	}
+
+	@ConfigItem(
+			keyName = "toggleFeature",
+			name = "Toggle Feature",
+			description = "Enable or disable a feature"
+	)
+	default boolean toggleFeature()
+	{
+		return false; // Default value
 	}
 }
